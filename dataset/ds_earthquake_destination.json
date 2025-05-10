@@ -1,0 +1,26 @@
+{
+	"name": "ds_earthquake_destination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "earthquake_data_@{formatDateTime(utcNow(),'yyyy-mm-dd')}",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@utcNow()",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze-layer"
+			}
+		},
+		"schema": {}
+	}
+}
