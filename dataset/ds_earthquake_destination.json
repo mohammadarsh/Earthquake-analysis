@@ -15,7 +15,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@formatDateTime(utcNow(),'yyyy-mm-dd')",
+					"value": "@formatDateTime(utcNow(),'yyyy-MM-dd')",
 					"type": "Expression"
 				},
 				"fileSystem": "bronze-layer"
