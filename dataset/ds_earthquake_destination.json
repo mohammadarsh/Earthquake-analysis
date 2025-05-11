@@ -11,11 +11,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "earthquake_data_@{formatDateTime(utcNow(),'yyyy-mm-dd')}",
+					"value": "earthquake_data_@{formatDateTime(utcNow(),'yyyyMMddHmmss')}.json",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@formatDateTime('yyyymmdd')",
+					"value": "@formatDateTime(utcNow(),'yyyy-mm-dd')",
 					"type": "Expression"
 				},
 				"fileSystem": "bronze-layer"
